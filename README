@@ -4,10 +4,13 @@ runcalc expects to be fed a file on standard input, which has three columns:
 	- distance run
 	- speed
 
-There are some control parameters in the file runcalc.cpp. This should probably change.
+There are some control parameters in the file runcalc.cpp. Set them how you'd like, then run:
+$ make
+$ ./runcalc < sample.txt
 
 TODO LIST:
 ==========
+ - use command line parsing instead of ghetto control panel.
  - Make it work with imperial units.
  - fix the 'runs of running' deal for mode 3.
 
