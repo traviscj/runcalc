@@ -1,0 +1,14 @@
+
+runcalc expects to be fed a file on standard input, which has three columns:
+	- number days since start date.
+	- distance run
+	- speed
+
+There are some control parameters in the file runcalc.cpp. This should probably change.
+
+TODO LIST:
+==========
+ - Make it work with imperial units.
+ - fix the 'runs of running' deal for mode 3.
+
+This code is basically crap. Please don't reuse it, lest it make you sad. Just kidding. See the license file for the real license.
