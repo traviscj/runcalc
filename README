@@ -13,5 +13,6 @@ TODO LIST:
  - use command line parsing instead of ghetto control panel.
  - Make it work with imperial units.
  - fix the 'runs of running' deal for mode 3.
+ - add something like the McMillian Run Calculator based on the fastest run. Anyone know of/have a journal article about this so I wouldn't be reverse engineering it?
 
 This code is basically crap. Please don't reuse it, lest it make you sad. Just kidding. See the license file for the real license.
