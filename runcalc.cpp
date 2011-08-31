@@ -18,17 +18,24 @@ int main() {
 	double dayCount=0, day, dist, kph, totalDist=0;
 	vector<double> days, dists, totalDists, kphs;
 	double junk; 
+	int bestIndex = -1; double fastestRun;
 	while (cin >> day >> dist >> kph) {
 		if (debug_mode) cout << "day = " << day << "; dist = " << dist << "; speed = " << kph << endl;
 		totalDist += dist;
 		if (!exclude_long_runs || dist < long_run_cutoff) {
 			if (report_mode == 2) 
-				days.push_back(dayCount++);
+				days.push_back(dayCount);
 			else
 				days.push_back(day);
 			dists.push_back(dist);
 			totalDists.push_back(totalDist);
 			kphs.push_back(kph);
+
+			if (bestIndex=-1 || kph < fastestRun) {
+				fastestRun = kph;
+				bestIndex = dayCount;
+			}
+			dayCount++;
 		}
 	}
 
@@ -94,5 +101,6 @@ int main() {
 		<< " I will hit the 6 minute/mile pinacle in " << xLeft << " " << xunit << "s of running," << endl
 		<< "or approximately " << xLeft-xk.size() << " " << xunit << "s of running from now." <<  endl;
 
+	cout << "Your best run was on day " << days[bestIndex] << " at a speed of " << kphs[bestIndex] << endl;
 	return 0;
 }
